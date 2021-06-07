@@ -1,0 +1,74 @@
+{
+	"folders": [
+		{
+			"name": "pythonProject",
+			"path": "../.."
+		}
+	],
+	"launch": {
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "rcard-to-slack:HelloWorldFunction",
+				"invokeTarget": {
+					"target": "template",
+					"templatePath": "${workspaceFolder}/rcard-to-slack/template.yaml",
+					"logicalId": "HelloWorldFunction"
+				},
+				"lambda": {
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "rcard-to-slack:HelloWorldFunction",
+				"invokeTarget": {
+					"target": "template",
+					"templatePath": "${workspaceFolder}/rcard-to-slack/template.yaml",
+					"logicalId": "HelloWorldFunction"
+				},
+				"lambda": {
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "rcard-to-slack:HelloWorldFunction (python3.8)",
+				"invokeTarget": {
+					"target": "template",
+					"templatePath": "${workspaceFolder}/rcard-to-slack/template.yaml",
+					"logicalId": "HelloWorldFunction"
+				},
+				"lambda": {
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "API rcard-to-slack:HelloWorldFunction (python3.8)",
+				"invokeTarget": {
+					"target": "api",
+					"templatePath": "${workspaceFolder}/rcard-to-slack/template.yaml",
+					"logicalId": "HelloWorldFunction"
+				},
+				"api": {
+					"path": "/hello",
+					"httpMethod": "get",
+					"payload": {
+						"json": {}
+					}
+				},
+				"lambda": {
+					"runtime": "python3.8"
+				}
+			}
+		]
+	}
+}
